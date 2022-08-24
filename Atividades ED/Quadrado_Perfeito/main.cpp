@@ -48,27 +48,37 @@ int main() {
         }
     }
 
-    for(int i=0; i<3; i++) {
-
         //diagonal principal
 
-        if((matriz[i][i]+matriz[i][i]+matriz[i][i])!=check) {
-
-            perfeita = false;
-        }
-    }
+    int soma_diag_principal = 0;
 
     for(int i=0; i<3; i++) {
+
+        soma_diag_principal = soma_diag_principal + matriz[i][i];
+
+    }
+    
+    if(soma_diag_principal!=check){
+
+        perfeita = false;
+
+    }
 
         //diagonal secundaria
 
-        for(int j=3; j>=0; j--) {
+    int cont = 2, soma_diag_secundaria = 0;
 
-            if((matriz[i][j]+matriz[i][j]+matriz[i][j])!=check) {
+    for(int i=0; i<3; i++) {
 
-                perfeita = false;
-            }
-        }
+        soma_diag_secundaria = soma_diag_secundaria + matriz[cont][i];
+        cont--;
+
+    }
+
+    if(soma_diag_secundaria!=check){
+
+        perfeita = false;
+
     }
 
     //verificaçao para printar.
