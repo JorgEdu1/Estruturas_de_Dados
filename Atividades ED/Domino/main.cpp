@@ -1,8 +1,14 @@
 #include <iostream>
 using namespace std;
 
+/* 
+    Questao pedia que uma soluçao para verificar se uma sequencia de caracteres estava em ordem crescente,
+    se sim, print "ok", se nao, "precisa de reparo"
+*/
+
 int main(){
 
+    //lendo a sequencia e armazenando em um vetor
     int n;
     cin >> n;
 
@@ -13,6 +19,8 @@ int main(){
         cin >> vetor[i]; 
 
     }
+
+    //checkando se esta em ordem crescente com ajuda de uma variavel booleana
 
     bool check = false;
 
@@ -31,6 +39,8 @@ int main(){
 
     }
 
+    //checkando a situaçao da variavel booleana, se true, esta crescente, se false, nao esta crescente
+
     if(check==true){
 
         cout << "ok" << endl;
@@ -41,4 +51,5 @@ int main(){
 
     }
 
+    return 0;
 }
