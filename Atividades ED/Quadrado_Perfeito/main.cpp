@@ -54,7 +54,7 @@ int main() {
 
     for(int i=0; i<3; i++) {
 
-        soma_diag_principal = soma_diag_principal + matriz[i][i];
+        soma_diag_principal += matriz[i][i];
 
     }
     
@@ -64,13 +64,13 @@ int main() {
 
     }
 
-        //diagonal secundaria
+        //diagonal secundaria.
 
     int cont = 2, soma_diag_secundaria = 0;
 
     for(int i=0; i<3; i++) {
 
-        soma_diag_secundaria = soma_diag_secundaria + matriz[cont][i];
+        soma_diag_secundaria += matriz[cont][i];
         cont--;
 
     }
