@@ -64,7 +64,7 @@ int main() {
 
     }
 
-        //diagonal secundaria.
+        //diagonal secundaria
 
     int cont = 2, soma_diag_secundaria = 0;
 
