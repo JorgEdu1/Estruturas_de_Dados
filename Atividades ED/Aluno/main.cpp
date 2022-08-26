@@ -23,19 +23,24 @@ aluno ler_aluno(){
     return ler;
 }
 
-int main(){
+void verifica(aluno aluno1){
 
-    aluno a = ler_aluno();
+    if(aluno1.nota >= 7){
 
-    if(a.nota >= 7){
-
-        cout << a.nome << " aprovado(a) em " << a.disciplina;
+        cout << aluno1.nome << " aprovado(a) em " << aluno1.disciplina;
 
     }else {
 
-        cout << a.nome << " reprovado(a) em " << a.disciplina;
+        cout << aluno1.nome << " reprovado(a) em " << aluno1.disciplina;
 
     }
+
+}
+
+int main(){
+
+    aluno a = ler_aluno();
+    verifica(a);
 
     return 0;
 }
