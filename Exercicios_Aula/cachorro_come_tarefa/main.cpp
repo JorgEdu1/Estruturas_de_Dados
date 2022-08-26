@@ -8,8 +8,12 @@ using namespace std;
 
 int main() {
 
+    //criando e lendo string
+
     string line;
     getline(std::cin, line);
+
+    //verificando se ha espaços duplicados ou tabs, e printando se tive OK!
 
     for (int i = 0; i < line.size(); i++){
         
@@ -18,6 +22,8 @@ int main() {
 
 
         }else{
+
+            //printando
 
             cout << line[i];
 
