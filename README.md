@@ -1,2 +1,2 @@
 # Estruturas_de_Dados
-Atividades da cadeira de ED
+Soluçoes de questoes da cadeira de Estrutura de dados, na UFC - Quixada.
