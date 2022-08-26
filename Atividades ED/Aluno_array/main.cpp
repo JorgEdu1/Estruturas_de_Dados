@@ -3,13 +3,13 @@
 #include <iomanip>
 using namespace std;
 
-    //INCOMPLETA
+    /*
+        questao pede que leia o numero de alunos que ele quer (vetor), e dps ele pede par ler
+        mais uma matricula para fazer uma verificacao no vetor, se tiver um aluno com essa matricula,
+        print, se nao, "nao encontrada".
+    */
 
-/*
-    questao pedia que recebesse 2 alunos por estrutura e verificasse quem tem maior nota.
-*/
-
-    //estrutura do aluno
+   //cria estrutura e "funcao" ou "metodo" que le os alunos.
 
  struct aluno {
 
@@ -17,46 +17,32 @@ using namespace std;
     string nome;
     float nota;
 
+    void ler_aluno(){
+
+        cin >> matricula;
+        cin.ignore();
+        getline(std::cin, nome);
+        cin >> nota;
+    
+    }
+
 };
 
-    //lendo os dados e botando na variavel da estrutura
+    //verifica se existe aluno com essa matricula.
 
-aluno ler_aluno(){
+int verifica(aluno& a, int aux){
 
-    aluno ler;
+    if(a.matricula == aux){
 
-    cin >> ler.matricula;
-    getline(std::cin,ler.nome);
-    cin >> ler.nota;
-    
+        return 1;
 
-    return ler;
-}
+    }else {
 
-    //verifica quem tem maior nota.
-
-void verifica(aluno aluno1, aluno aluno2){
-
-    cout << fixed;
-    cout << setprecision(1);
-
-    if(aluno1.nota > aluno2.nota){
-
-        cout << aluno1.nome << " , " << aluno1.nota;
-
-    }else if(aluno2.nota > aluno1.nota){
-
-        cout << aluno2.nome << " , " << aluno2.nota;
-
-    }else{
-
-        cout << aluno1.nome << " e " << aluno2.nome << " , " << aluno1.nota;
+        return 0;
 
     }
 
 }
-
-    //funçao main que chama as anteriores
 
 int main(){
 
@@ -67,8 +53,34 @@ int main(){
 
     for (int i = 0; i < n; i++){
 
-        aluno a[i] = ler_aluno();
+        a[i].ler_aluno();
         
+    }
+
+    //parte da verificacao
+
+    int mat_check;
+    cin >> mat_check;
+    bool check_print = false;
+
+    for (int i = 0; i < n; i++){
+        
+        if(verifica(a[i], mat_check) == true){
+
+            cout << fixed;
+            cout << setprecision(1);
+            cout << a[i].nome << endl;
+            cout << a[i].nota;
+            check_print = true;
+
+        }
+
+     }
+
+    if(check_print == false){
+
+        cout << "NAO ENCONTRADA";
+
     }
 
     return 0;
