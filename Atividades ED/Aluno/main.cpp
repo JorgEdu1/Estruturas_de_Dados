@@ -2,6 +2,13 @@
 #include <string>
 using namespace std;
 
+/*
+    questao pedia que fosse criado um estrutura de aluno, e que verificasse se o aluno
+    foi aprovado ou reprovado.
+ */
+
+    //criando estrutura
+
  struct aluno {
 
     string nome;
@@ -10,6 +17,8 @@ using namespace std;
     double nota;
 
 };
+
+    //lendo os dados
 
 aluno ler_aluno(){
 
@@ -22,6 +31,8 @@ aluno ler_aluno(){
 
     return ler;
 }
+
+    //verificando se foi aprovado ou reprovado
 
 void verifica(aluno aluno1){
 
@@ -36,6 +47,8 @@ void verifica(aluno aluno1){
     }
 
 }
+
+    //funçao main que chama as anteriores.
 
 int main(){
 

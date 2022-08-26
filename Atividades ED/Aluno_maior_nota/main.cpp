@@ -3,6 +3,12 @@
 #include <iomanip>
 using namespace std;
 
+/*
+    questao pedia que recebesse 2 alunos por estrutura e verificasse quem tem maior nota.
+*/
+
+    //estrutura do aluno
+
  struct aluno {
 
     string nome;
@@ -11,6 +17,8 @@ using namespace std;
     double nota;
 
 };
+
+    //lendo os dados e botando na variavel da estrutura
 
 aluno ler_aluno(){
 
@@ -23,6 +31,8 @@ aluno ler_aluno(){
 
     return ler;
 }
+
+    //verifica quem tem maior nota.
 
 void verifica(aluno aluno1, aluno aluno2){
 
@@ -44,6 +54,8 @@ void verifica(aluno aluno1, aluno aluno2){
     }
 
 }
+
+    //funçao main que chama as anteriores
 
 int main(){
 
