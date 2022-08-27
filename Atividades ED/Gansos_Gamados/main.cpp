@@ -1,32 +1,57 @@
 #include <iostream>
+#include <iomanip>
 #include <string>
 using namespace std;
 
-//nao terminada.
+    /*
+        questao pedia que verificassemos se a frase esta em ordem lexicografica ou nao.
+    */
 
-int main(){
+int main () {
 
-    string vetor;
-    getline(std::cin, vetor);
-    int tam = vetor.size();
+    //criei uma stringstream para poder quebrar a string que irei ler em palavras separadas.
 
-    bool check = false;
+    stringstream ss ; 
+    string str ;
+    string value ;
+    string ant_word = "oio";
+    bool check = true;
 
-    for(int i=0; i< tam-1; i++){
+    getline ( cin , str ) ;
+    ss << str ;
+
+    //todo momento em que eu leio uma palavra da stringstream, isso da um retorno verdadeiro, permitindo
+    //o while funcionar.
+    
+    while ( ss >> value ) {
+            
+        //verificando se a frase e lexicografica mesmo.
+
+        if(ant_word == "oio"){
+
 
         
+        }else if(ant_word >= value){
 
+            check = false;
+
+        }
+
+        ant_word = value;
+ 
     }
+ 
+    //checko pela variavel booleana se esta true ou false e printo.
 
-    if(check == true){
+    if(check){
 
-        cout << "sim";
+        cout << "sim" << endl;
 
-    }else {
-
-        cout << "nao";
+    }else{
+    
+        cout << "nao" << endl;
 
     }
     
-    return 0;
-}
+
+ }
