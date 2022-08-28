@@ -3,7 +3,14 @@
 #include <string>
 using namespace std;
 
+    /*
+        questao pedia que recebesse uma frase e fizesse uma operacao que o usuario dogitasse, M para tudo maiuscula, m para tudo
+        minuscula, p para toda palavra comecar maiuscula, i para inverter a case.
+    */
+
 int main(){
+
+    //lendo os valores e armazenando a frase dentro de um stringstream.
 
     string line;
     char format;
@@ -13,6 +20,8 @@ int main(){
     stringstream ss(line);
     string value;
     string str;
+
+    //verificacoes de cada caso.
 
     if (format == 'M'){
         
@@ -98,6 +107,11 @@ int main(){
         }
 
     }
+
+    /*
+    o corretor da questao estava pegando um espaco no final da frase, tive que fazer 
+    isso para passar nos testes.
+    */
 
     for (int i = 0; i < str.size() - 1; i++){
     
