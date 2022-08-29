@@ -5,7 +5,7 @@ using namespace std;
 // retorna o resultado através dos parâmetros 'hor', 'min' e 'seg'.
 void converte_tempo(int segundos, int *hor, int *min, int *seg){
     
-    while(segundos >= 0){
+    while(segundos > 0){
 
         if(*seg > 59){
 
@@ -23,8 +23,6 @@ void converte_tempo(int segundos, int *hor, int *min, int *seg){
         (*seg)++;
         segundos--;
     }
-
-    (*seg)--;
 
 }
 
