@@ -14,7 +14,7 @@ int main () {
     stringstream ss ; 
     string str ;
     string value ;
-    string ant_word = "oio";
+    string ant_word = "zzz";
     bool check = true;
 
     getline ( cin , str ) ;
@@ -27,9 +27,9 @@ int main () {
             
         //verificando se a frase e lexicografica mesmo.
 
-        if(ant_word == "oio"){
+        if(ant_word == "zzz"){
 
-
+            
         
         }else if(ant_word >= value){
 
