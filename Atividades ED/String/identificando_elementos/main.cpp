@@ -8,7 +8,7 @@ using namespace std;
         digitado pelo usuario.
     */
 
-   //funca que verifica se e decimal ou hexadecimal ponto flutuante.
+   //funcao que verifica se e decimal ou hexadecimal ponto flutuante.
 
 bool flutuante(string teste){
 
