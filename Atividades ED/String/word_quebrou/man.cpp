@@ -20,7 +20,7 @@ int main(){
     stringstream ss(line);
     string value;
     string str;
-
+    
     //verificacoes de cada caso.
 
     if (format == 'M'){
