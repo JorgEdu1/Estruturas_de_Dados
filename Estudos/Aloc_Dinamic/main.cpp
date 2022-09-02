@@ -15,8 +15,6 @@ int* insere_indice(int *v, int *n, int novo){
         delete v; 
         v = nullptr;
     }
-
-    
     
     aux[*n-1] = novo;
 
