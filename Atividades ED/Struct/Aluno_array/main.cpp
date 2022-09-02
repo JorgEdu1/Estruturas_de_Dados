@@ -30,7 +30,7 @@ using namespace std;
 
     //verifica se existe aluno com essa matricula.
 
-int verifica(aluno& a, int aux){
+int verifica(aluno a, int aux){
 
     if(a.matricula == aux){
 
@@ -65,7 +65,7 @@ int main(){
 
     for (int i = 0; i < n; i++){
         
-        if(verifica(a[i], mat_check) == true){
+        if(verifica(a[i], mat_check)){
 
             cout << fixed;
             cout << setprecision(1);
