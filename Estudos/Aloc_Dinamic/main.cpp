@@ -52,6 +52,7 @@ void fechar(int *v){
 
     int opa = 1;
     delete[] v;
+    system("clear || cls");
     exit(opa);
 
 }
@@ -87,7 +88,7 @@ int main(){
             cin >> novo;
             vetor = insere_indice(vetor, &n, novo);
             novo = 0;
-            system("clear");//uso linux xD
+            system("clear || cls");
 
         }else if(op == 2){
 
@@ -95,7 +96,7 @@ int main(){
             cout << "digite o indice que deseja retirar: ";
             cin >> indice;
             vetor = remove_indice(vetor, &n, indice);
-            system("clear");
+            system("clear || cls");
 
         }else if(op == 3){
 
@@ -111,7 +112,7 @@ int main(){
             cin >> check;
             if (check == 's'){
 
-                system("clear");
+                system("clear || cls");
 
             }
 
