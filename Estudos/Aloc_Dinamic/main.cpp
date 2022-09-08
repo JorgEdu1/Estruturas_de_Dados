@@ -12,7 +12,7 @@ int* insere_indice(int *v, int *n, int novo){
        for (int i = 0; i < *n; i++){
          aux[i] = v[i]; 
        }
-        delete v; 
+        delete[] v; 
         v = nullptr;
     }
     
@@ -43,7 +43,7 @@ int* remove_indice(int *v, int *n, int ind){
 
     }
 
-    delete v;
+    delete[] v;
     v = nullptr;
     return aux;
 } 
