@@ -2,7 +2,7 @@
 #include <cstdlib>
 #include <iomanip>
 using namespace std;
-//teste
+
 struct aluno {
    int matricula;
    char nome[50];
