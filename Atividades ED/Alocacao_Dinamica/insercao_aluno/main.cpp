@@ -8,7 +8,6 @@ struct aluno {
    char nome[50];
    float media;
 };
-
 aluno le_aluno()
 {
     aluno a;
