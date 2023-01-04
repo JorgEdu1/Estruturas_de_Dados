@@ -2,7 +2,14 @@
 #include <cstdlib>
 #include <iomanip>
 using namespace std;
-
+/*
+Leia uma sequência de operações de inclusão/remoção de alunos, 
+e imprima ao final o vetor resultante. Após cada operação, o 
+vetor deve conter apenas a memória necessária para armazenar 
+os alunos restante no vetor, ou seja, será necessário realocar
+memória para o vetor em cada operação. Instruções detalhadas 
+são fornecidas no arquivo de envio.
+*/
 struct aluno {
    int matricula;
    char nome[50];
@@ -37,20 +44,14 @@ aluno* insere_aluno(aluno *v, int *n, aluno novo){
     *n += 1;
     aluno *aux;
     aux = new aluno[*n];
-
     if(v != 0) {
-
-       for (int i = 0; i < *n; i++){
+      for (int i = 0; i < *n; i++){
          aux[i] = v[i]; 
-       }
-       
-        delete v; 
-        v = nullptr;
-
+      }
+         delete v; 
+         v = nullptr;
     }
-    
     aux[*n-1] = novo;
-
     return aux;
 }
 
@@ -72,26 +73,16 @@ Pseudocódigo:
    retorne o endereço de memória do vetor realocado
 */
 aluno* remove_aluno(aluno *v, int *n, int matricula){
-
     *n -= 1;
     aluno *aux = new aluno[*n];
-
     for(int i = 0; i < *n+1; i++){
-
         if(v[i].matricula == matricula){
-
             v[i] = v[*n];
-
         }
-
     }
-
-    for(int i = 0; i < *n; i++){
-
-        aux[i] = v[i];
-
+   for(int i = 0; i < *n; i++){
+      aux[i] = v[i];
     }
-
     delete v;
     v = nullptr;
     return aux;
